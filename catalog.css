@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: Montserrat;
+  }
+  
+  body {
+    font-size: 16px;
+    }
+  
+  .header {
+    width: 100%;
+  }
+  
+  .header__menu_button 
+  {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  
+  .header-info {
+    height: 80px;
+    background-color: #404040;
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 0.75rem;
+    position: relative;
+  }
+  
+  .header-block-info {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 1.7rem;
+    margin-right: 1.7rem;
+  }
+  
+  .button-order {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 0.8rem 3vw;
+    color: white;
+    background-color: #E05100;
+  }
+  
+  .header-button-order 
+  {
+    margin-left: 3vw;
+  }
+  
+  .nav
+  {
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.1vw;
+  }
+  
+  .menu
+  {
+    display: flex;
+    align-items: center;
+  }
+  
+  .list 
+  {
+    display: flex; 
+    list-style-type: none; 
+    gap: 2.8vw; 
+  }
+  
+  .menu-link 
+  {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  
+.footer {
+    padding-top: 20px;
+    color: black;
+    margin: 0 17.19vw; 
+  }
+  
+  
+  .footer-container 
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 9.375vw;
+    max-width: 1050px;
+    width: 100%; 
+  
+  
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 143px;
+    flex: 1;
+  }
+  
+  .footer-title {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    color: #E05100;
+    
+  }
+  
+  .footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .footer-column p {
+    font-size: 12px;
+    line-height: 16px; 
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media screen and (width < 1250px)
+  {
+   .header-block-info img
+   {
+     display: none;
+   }
+   .block1-inside
+   {
+    width: 70%;
+   }
+   .h1
+   {
+    font-size: 36px;
+   }
+   .h2
+  {
+    font-size: 30px;
+  }
+  
+  .footer
+  {margin:0 8vw;}
+  
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8vw;
+  }
+  
+  }
+  
+  @media screen and (width < 1020px)
+  {
+   .nav img
+   {
+    display: none;
+   }
+   .header-block-info {
+    margin-right: 2.5rem;
+   }
+   .button-order
+   {
+     padding: 0.8rem 1vh;
+     width: 170px;
+   }
+   .header-button-order
+   {
+     padding: 0.8rem 0.8rem;
+   }
+   .h1 {
+    font-size: 32px; 
+  }
+  
+  .footer
+  {
+    margin: 0 50px;
+  }
+  .footer-container {
+    gap: 30px;
+  }
+  
+  
+  }
+  
+  @media screen and (width < 768px) {
+    .nav {
+      display: none;
+    }
+    .header-block-info {
+      display: none; 
+    }
+    .button-order {
+      display: none;
+    }
+    .h1 {
+      font-size: 24px; 
+    }
+    .header__menu_button 
+    {
+      display: block;
+    }
+  
+  }
+  @media screen and (width < 600px) {
+  
+    .h2
+    {
+      font-size: 24px;
+    }
+    .h3
+    {
+      font-size: 14px;
+    }
+  
+  
+  .footer {
+    margin: 0 15.625vw; 
+  }
+  
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.375rem; 
+    width: auto;
+  }
+  
+  
+  .footer-title {
+    font-size: 0.75rem; 
+  }
+  
+  .footer-copyright {
+    font-size: 0.625rem; /* 10px -> 0.625rem */
+  }
+  
+  
+  }
+  
+  @media screen and (width < 350px) {
+  
+    .h2
+    {
+      font-size: 20px;
+    }
+    
+    .footer-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.375rem; /* 22px -> 1.375rem */
+      width: auto;
+      padding: 0 1.5rem;
+  }
+  
+  
+  }
+  
