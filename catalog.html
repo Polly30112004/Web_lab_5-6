@@ -1,66 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css.css">
-    <title>Тротуарная плитка/Каталог</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalog.css">
+    <title>Тротуарная плитка / Каталог</title>
 </head>
 <body>
-<header class = "header">
-    <div class = "header-info">
-        <button class="header__menu_button">☰</button> 
-        <div class = "header-block-info"> <img src="img/метка_места.png" alt="">
-            Волоколамский район,<br> пос. Чисмена, ул. Центральная, 1
-            <img src="img/риска.png" alt="">
+    <header class="header">
+        <div class="header-info">
+            <button class="header__menu_button">☰</button>
+            <div class="header-block-info">
+                <img src="img/метка_места.png" alt="">
+                Волоколамский район,<br> пос. Чисмена, ул. Центральная, 1
+                <img src="img/риска.png" alt="">
+            </div>
+            <div class="header-block-info">
+                <img src="img/часы_белые.png" alt="">
+                Режим работы:<br> с 8:00 до 20:00
+                <img src="img/риска.png" alt="">
+            </div>
+            <div class="header-block-info">
+                <img src="img/телефон_белый.png" alt="">
+                +7 (926) 105-94-14<br>+7 (910) 470-67-97<br>+7 (499) 994-90-99
+            </div>
+            <div class="header-button-order">
+                <button class="button-order">Заказать звонок</button>
+            </div>
         </div>
-        <div class = "header-block-info"><img src="img/часы_белые.png" alt="">
-        Режим работы:<br> с 8:00 до 20:00
-        <img src="img/риска.png" alt="">
+        <div class="nav">
+           <a href="/index.html"><img src="img/бренд.png" alt="Логотип"></a> 
+            <nav class="menu">
+                <ul class="list">
+                    <li><a href="/index.html" class="menu-link">О компании</a></li>
+                    <li><a href="#laying" class="menu-link">Укладка тротуарной плитки</a></li>
+                    <li><a href="#portfolio" class="menu-link">Портфолио</a></li>
+                    <li><a href="#useful" class="menu-link">Полезно знать</a></li>
+                    <li><a href="#delivery" class="menu-link">Доставка и оплата</a></li>
+                    <li><a href="#contacts" class="menu-link">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class = "header-block-info">
-            <img src="img/телефон_белый.png" alt="">
-        +7 (926) 105-94-14<br>+7 (910) 470-67-97<br>+7 (499) 994-90-99
+    </header>
+    <main class="main">
+        <h2 class="h2">Каталог продукции</h2>
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Поиск по названию">
+            <select id="sort-select">
+                <option value="name-asc">По названию (А-Я)</option>
+                <option value="name-desc">По названию (Я-А)</option>
+                <option value="price-asc">По цене (возр.)</option>
+                <option value="price-desc">По цене (убыв.)</option>
+            </select>
+            <select id="category-select">
+                <option value="all">Все категории</option>
+                <option value="Плитка">Плитка</option>
+                <option value="Бордюр">Бордюр</option>
+                <option value="Блок">Блок</option>
+                <option value="Водосток">Водосток</option>
+                <option value="Крышка">Крышка</option>
+            </select>
         </div>
-        <div class = "header-button-order">
-            <button class = "button-order">Заказать звонок</button> 
-        </div>
-    </div>
-    
-    <div class = "nav">       
-        <a href="index.html"><img src="img/бренд.png" alt=""></a>             
-    <nav class = "menu">
-      <ul class = "list">
-        <li>
-            <a href="#about" class = "menu-link">О компании</a>
-        </li>
-        <li>
-            <a href="#laying" class = "menu-link">Укладка тротуарной плитки</a>
-        </li>
-        <li>
-        <a href="#portfolio" class = "menu-link">Портфолио</a>
-        </li>
-        <li>
-            <a href="#useful" class = "menu-link">Полезно знать</a>
-        </li>
-        <li>
-            <a href="#delivery" class = "menu-link">Доставка и оплата</a>
-        </li>
-        <li>
-            <a href="#contacts" class = "menu-link">Контакты</a>
-        </li>
-      </ul>
-     </nav>
-    </div>
-</header>
-<main class = "main">   
-    
-    
-</main> 
-
+<div class="method-buttons">
+    <button class="button-order" onclick="applyMethod('map-discount')">Скидка 10% (map)</button>
+    <button class="button-order" onclick="applyMethod('filter-type')">Плитка (filter)</button>
+    <button class="button-order" onclick="applyMethod('reduce-total')">Общая стоимость (reduce)</button>
+    <button class="button-order" onclick="applyMethod('sort-price')">По цене (sort)</button>
+    <button class="button-order" onclick="applyMethod('slice-first5')">Первые 5 (slice)</button>
+<button class="button-order" onclick="applyMethod('includes-gray')">С серым цветом (includes)</button>
+    <button class="button-order" onclick="applyMethod('find-expensive')">Самый дорогой (find)</button>
+    <button class="button-order" onclick="applyMethod('forEach-log')">Логировать (forEach)</button>
+    <button class="button-order" onclick="applyMethod('some-cheap')">Есть дешевые? (some)</button>
+    <button class="button-order" onclick="applyMethod('every-instock')">Все в наличии? (every)</button>
+</div>
+        <div class="catalog-container"></div>
+        <div class="no-results" >Товары не найдены</div>
+    </main>
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -98,6 +116,6 @@
         <p>© 2022 ООО «Мастер строй»</p>
     </div>
 </footer>
-
+    <script src="js.js"></script>
 </body>
 </html>

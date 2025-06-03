@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Анимация 1: Сдвиг градиента */
 .header-info {
   height: 80px;
   background: linear-gradient(45deg, #404040, #606060, #404040);
@@ -28,13 +27,6 @@ body {
   position: relative;
   animation: gradientShift 5s linear infinite;
   overflow-x: hidden;
-}
-
-/* Псевдокласс 1: Чекбокс при выборе */
-.header-info input[type="checkbox"]:checked {
-  accent-color: #E05100;
-  transform: scale(1.2);
-  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .header__menu_button {
